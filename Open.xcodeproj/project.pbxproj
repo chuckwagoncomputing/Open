@@ -11,7 +11,7 @@
 		634975A1161E852C00433649 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6349759F161E852C00433649 /* InfoPlist.strings */; };
 		634975A3161E852C00433649 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 634975A2161E852C00433649 /* main.m */; };
 		634975A7161E852C00433649 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 634975A5161E852C00433649 /* Credits.rtf */; };
-		634975AA161E852C00433649 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 634975A9161E852C00433649 /* AppDelegate.m */; };
+		634975AA161E852C00433649 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 634975A9161E852C00433649 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		634975AD161E852C00433649 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634975AB161E852C00433649 /* MainMenu.xib */; };
 		634975B5161E852C00433649 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634975B4161E852C00433649 /* SenTestingKit.framework */; };
 		634975B6161E852C00433649 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63497596161E852C00433649 /* Cocoa.framework */; };
