@@ -1,18 +1,1 @@
-UNCOMPLETE PRE-ALPHA VERSION
-
-This is uncomplete pre-alpha version 2.
-
-For the old version, look in open_old
-Here is the readme for the old version:
-
-Open
-
- Open is a small ApplescriptObjC application for launching other apps with one
- click. It is good for saving Dock space.
-
-How to Use
-
- Make .applescript files in Xcode (Note: Xcode 4 does not fully support 
- ApplescriptObjC, so use Xcode 3). Enter tell scripts to launch Apps.
- Add buttons in Interface Builder and connect them to the .applescript files.
- Build and Go.
+Open Version 2
