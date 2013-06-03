@@ -6,12 +6,14 @@ class Application
  include HotCocoa
 
  def start
+  @plist = File.dirname(__FILE__) + "/items.plist"
+  @icon = File.dirname(__FILE__) + "/logo.png"
   application(:name => "Open") do |app|
    app.delegate = self
-   if File.file?('items.plist')
-    @items = load_plist File.read("items.plist")
+   if File.file?(@plist)
+    @items = load_plist File.read(@plist)
    else
-    File.new('items.plist', 'w')
+    File.new(@plist, 'w')
    end
    @m = menu do |main|
     @items.each_key do |path|
@@ -22,7 +24,7 @@ class Application
     main.item(:settings)
     main.item(:quit)
    end
-   @img = image(:file => 'logo.png')
+   @img = image(:file => @icon)
    @stat = status_item(:image => @img, :menu => @m, :length => 24, :highlight_mode => true)
   end
  end
@@ -38,7 +40,7 @@ class Application
    if dialog.runModalForDirectory(nil, file:nil) == NSOKButton
     newitempath = dialog.filenames.first
     @items[newitempath] = true
-    @items.writeToFile('items.plist', :atomically => true)
+    @items.writeToFile(@plist, :atomically => true)
     load_items
    end
   end
@@ -46,7 +48,7 @@ class Application
   rmButton.on_action do
    rowtorm = @table.selectedRow
    @items.delete(@items.keys[rowtorm])
-   @items.writeToFile('items.plist', :atomically => true)
+   @items.writeToFile(@plist, :atomically => true)
    load_items
   end
   itemsTable = scroll_view(:layout => {:expand => [:width, :height]}) do |scroll|
