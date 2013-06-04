@@ -29,7 +29,7 @@ class Application
    @m = menu do |main|
     @items.each_key do |path|
      name = File.basename(path)
-     main.item(:item, :title => name, :on_action => proc { `open #{path}` })
+     main.item(:item, :title => name, :on_action => proc { `open "#{path}"` })
     end
     main.separator
     main.item(:settings)
@@ -85,7 +85,7 @@ class Application
   @m = menu do |main|
    @items.each_key do |path|
     name = File.basename(path)
-    main.item(:item, :title => name, :on_action => proc { `open #{path}` })
+    main.item(:item, :title => name, :on_action => proc { `open "#{path}"` })
    end
    main.separator
    main.item(:settings)
